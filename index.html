@@ -1,18 +1,73 @@
-<!DOCTYPE html>
+<!-- index.html -->
+<!doctype html>
 <html lang="nl">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Mijn Blog</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stageblog — Arnout Versé</title>
+  <meta name="description" content="Stageblog van Arnout Versé bij Two Of A Kind">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<h1>Mijn Blog</h1>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="profile" aria-label="Profiel informatie">
+        <img class="avatar" src="images/IMG_6077.jpeg" alt="Profielfoto van Arnout Versé">
 
-<article>
-  <h2>Eerste post</h2>
-  <p>Welkom op mijn blog 🚀</p>
-</article>
+        <div class="profile-text">
+          <h1>Arnout Versé</h1>
+          <p class="lead">Stageblog</p>
+
+          <div class="meta">
+            <span>Two Of A Kind</span>
+            <span class="dot">•</span>
+            <a href="https://www.twoofakind.agency/en/" target="_blank" rel="noopener noreferrer">
+              twoofakind.agency
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="section-head">
+      <h2>Blogposts</h2>
+      <p>Overzicht van mijn updates tijdens de stage.</p>
+    </section>
+
+    <section class="posts" aria-label="Lijst van blogposts">
+
+      <article class="post-card">
+        <a class="post-link" href="post-week1-2.html" aria-label="Lees blogpost Week 1 en 2">
+          <div class="post-card-top">
+            <h3>Week 1 &amp; 2</h3>
+            <time datetime="2026-02">Februari 2026</time>
+          </div>
+
+          <p class="excerpt">
+            In deze eerste weken werkte ik aan website designs in Figma en werkte ik ze uit
+            in WordPress met Elementor. Daarnaast maakte ik kennis met het team en de werkomgeving.
+          </p>
+
+          <span class="cta">Lees blogpost</span>
+        </a>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 — Arnout Versé</p>
+    </div>
+  </footer>
 
 </body>
+
 </html>

@@ -1,0 +1,278 @@
+/* styles.css */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --muted: #6b7280;
+
+  --border: #e5e7eb;
+  --surface: #f8f8f8;
+
+  --radius: 18px;
+  --max: 960px;
+
+  --shadow: 0 12px 24px rgba(0, 0, 0, .06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Layout */
+.wrap {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* ===== HEADER (INDEX) ===== */
+.site-header {
+  padding: 56px 0 32px;
+  background: #000000;
+  color: #ffffff;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+
+.profile-text h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  margin: 6px 0 10px;
+  color: #d1d5db;
+}
+
+.meta {
+  display: flex;
+  gap: 10px;
+  color: #d1d5db;
+  font-size: 0.95rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.meta a {
+  border-bottom: 1px solid transparent;
+  /* geen lijn zichtbaar */
+  transition: border-color .15s ease;
+}
+
+.meta a:hover {
+  border-bottom-color: #ffffff;
+  /* verschijnt bij hover */
+}
+
+/* ===== MAIN (INDEX) ===== */
+.section-head {
+  padding: 30px 0 12px;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.section-head p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+/* Blog card */
+.posts {
+  display: grid;
+  gap: 16px;
+  padding-bottom: 34px;
+}
+
+.post-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.post-link {
+  display: block;
+  padding: 24px;
+}
+
+.post-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.post-card-top h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+time {
+  color: var(--muted);
+  font-size: .95rem;
+  white-space: nowrap;
+}
+
+.excerpt {
+  margin: 12px 0 14px;
+  color: var(--muted);
+}
+
+.cta {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-size: 0.9rem;
+  color: var(--text);
+  transition: all .15s ease;
+}
+
+/* hover effect zoals back button */
+.cta:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.site-footer {
+  border-top: 1px solid #f1f5f9;
+  padding: 16px 0 18px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+/* ===== POST PAGE ===== */
+.post-top {
+  background: #000000;
+  color: #ffffff;
+  padding: 36px 0 26px;
+}
+
+/* profiel in post header iets compacter */
+.post-profile {
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+.post-hero {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 18px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  color: #d1d5db;
+  background: transparent;
+  transition: all .15s ease;
+}
+
+/* hover = subtiele button */
+.back:hover {
+  background: rgba(255, 255, 255, .08);
+  border-color: rgba(255, 255, 255, .5);
+  color: #ffffff;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.post-subtitle {
+  margin: 8px 0 0;
+  color: #d1d5db;
+}
+
+.post {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 0 28px;
+}
+
+.block {
+  padding: 22px 0;
+  margin: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.block:last-child {
+  border-bottom: none;
+}
+
+.block h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.block p {
+  margin: 0;
+  color: #111827;
+}
+
+.block.accent h3 {
+  color: #000000;
+}
